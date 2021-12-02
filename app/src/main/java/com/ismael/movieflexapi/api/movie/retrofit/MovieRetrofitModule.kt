@@ -16,4 +16,8 @@ class MovieRetrofitModule {
     fun getRecommendation() : IMovieAPI.Recommendation{
         return RetrofitClient().getRetrofitInstance(RetrofitClient().getURLApi())!!.create(IMovieAPI.Recommendation::class.java)
     }
+
+    fun getMovieDetail(): IMovieAPI.Detail{
+        return RetrofitClient().getRetrofitInstance(RetrofitClient().getURLApi())!!.create(IMovieAPI.Detail::class.java)
+    }
 }

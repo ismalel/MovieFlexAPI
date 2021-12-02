@@ -58,7 +58,7 @@ dependencies {
 
 
 
-    implementation 'com.github.ismalel:MovieFlexPersistence:0.2.4'
+    implementation 'com.github.ismalel:MovieFlexPersistence:0.2.5'
 
 
 }
