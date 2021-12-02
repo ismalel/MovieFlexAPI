@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
     id 'kotlin-android'
 }
 
@@ -62,4 +63,15 @@ dependencies {
 
 }
 
-
+afterEvaluate {
+    publishing{
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId = 'com.ismael'
+                artifactId = 'movieflexapi'
+                version = '0.0.1'
+            }
+        }
+    }
+}
