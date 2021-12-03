@@ -1,7 +1,7 @@
 package com.ismael.movieflexapi.api.movie.repository
 
 import com.ismael.movieflexapi.api.movie.retrofit.MovieRetrofitModule
-import com.ismael.movieflexpersistence.DetailData
+import com.ismael.movieflexpersistence.MovieDetailData
 import com.ismael.movieflexpersistence.entity.movie.MovieData
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -40,7 +40,7 @@ class MovieRepository : IMovieRepository {
             }
     }
 
-    override fun getMovieDetail(movie_id: Int, api_key: String?): Observable<DetailData>? {
+    override fun getMovieDetail(movie_id: Int, api_key: String?): Observable<MovieDetailData>? {
         return movieRetrofitModulo.getMovieDetail()
             .getMovieDetail(movie_id,api_key)
             .subscribeOn(Schedulers.io())
